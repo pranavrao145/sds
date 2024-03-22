@@ -79,7 +79,7 @@ Task 1: Refactoring the refactor
 A New Competitor Enters the Ring
 ===
 
-![](./figures/sds-update-feb-2/coveralls.png)
+![](./figures/sds-update-2-2-24/coveralls.png)
 
 <!-- end_slide -->
 
@@ -179,7 +179,7 @@ end
 New Coverage
 ===
 
-![](./figures/sds-update-feb-2/tests.png)
+![](./figures/sds-update-2-2-24/tests.png)
 
 
 <!-- end_slide -->
@@ -243,7 +243,7 @@ respective `create_or_update_from_csv_row` method is covered.
 <!-- end_slide -->
 Meme
 ===
-![](./figures/sds-update-feb-2/meme.png)
+![](./figures/sds-update-2-2-24/meme.png)
 
 <!-- end_slide -->
 <!-- jump_to_middle -->

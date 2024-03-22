@@ -8,25 +8,6 @@ theme:
       colors:
         background: black
 ---
-
-The Tasks
-===
-# Tasks from Last Week
-<!-- incremental_lists: true -->
-<!-- pause -->
-* Make corrections on last week's PR:
-    * Small formatting change in the test names
-    * Refactor `flash_csv_result` function to `MarkusCsv` library
-<!-- new_line -->
-<!-- pause -->
-
-# New Task
-<!-- pause -->
-* Issue `#5137`: let TAs see the starter files that were assigned to each
-   student
-
-<!-- end_slide -->
-
 Task 1: Fixing up Last Week's PR
 ===
 <!-- incremental_lists: true -->
@@ -280,6 +261,14 @@ Code Walk: Policies
 <!-- jump_to_middle -->
 Demo: What I Have So Far
 ===
+<!-- end_slide -->
+The Two Moods of This Week
+===
+<!-- column_layout: [1, 1] -->
+<!-- column: 0 -->
+![](./figures/sds-update-3-15-24/2.png)
+<!-- column: 1 -->
+![](./figures/sds-update-3-15-24/3.png)
 <!-- end_slide -->
 <!-- jump_to_middle -->
 The End!
