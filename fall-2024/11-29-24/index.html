@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>SDS Presentation 11/29/24</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>SDS Wrapped</h1>
+          <p>Pranav Rao</p>
+          <p>11/29/24</p>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### This week
+
+            <span class="fragment">**Merged:** Retain old grading data on re-collection</span><br/><br/>
+            <span class="fragment">**Merged:** Feature: PDF zoom and rotation</span><br/><br/>
+            <span class="fragment">**In progress:** Scale rubric criterion marks on update of `max_mark`</span>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            #### Scale rubric criterion marks on update of `max_mark`<br><br>
+            ##### <span class="fragment">Demo: The Problem</span>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Order of operations
+            <span class="fragment">1. Process all form data except level marks <br>(including `max_mark`)</span><br>
+            <span class="fragment">2. Scale levels according to `max_mark`</span><br>
+            <span class="fragment">3. Process form data for levels</span><br>
+            <span class="fragment">4. Other necessary operations</span><br>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            #### <span class="fragment">Problem</span>
+            <span class="fragment">Scaling the marks and then <b>overwriting them</b> with the form data.</span>
+            <br>
+            <br>
+
+            #### <span class="fragment">Solution</span>
+            <span class="fragment">Process the form data and then apply the scale to the new marks (<b>switch the order</b>).</span>
+          </textarea>
+        </section>
+        <section>
+          <h2>SDS Wrapped</h2>
+        </section>
+        <section>
+          <section>
+            <h3 class="fragment">Pull Requests Completed: 4 (+ 1)</h3>
+          </section>
+          <section><h3>Code reviews processed: 8</h3></section>
+          <section><h3>Wiki PRs merged: 1 (+1)</h3></section>
+          <section><h3>User issues closed: 3 (+1)</h3></section>
+          <section><h3>Lines of code added: 1010 (+40)</h3></section>
+          <section><h3>Lines of code removed: 107 (+5)</h3></section>
+          <section><h3>RSpec tests written/modified: 32 (+2)</h3></section>
+          <section><h3>Jest tests written/modified: 16</h3></section>
+          <section><h3>Avg. unit test coverage rate: 98.098</h3></section>
+        </section>
+        <section>
+          <h2>This Semester vs. Last Semester</h2>
+          <div style="height:50vh">
+            <canvas data-chart="bar">
+              <!--
+                {
+                "data": {
+                "labels": [
+                "Pull Requests Completed",
+                "Code Reviews Processed",
+                "Wiki PRs Merged",
+                "User Issues Closed",
+                "RSpec Tests Written/Modified",
+                "Jest Tests Written/Modified",
+                "Avg. Unit Test Coverage Rate"
+                ],
+                "datasets": [
+                {
+                "label": "This Semester",
+                "data": [4, 8, 1, 3, 32, 16, 98.098],
+                "backgroundColor": "rgba(54, 162, 235, 0.7)",
+                "borderColor": "rgba(54, 162, 235, 1)",
+                "borderWidth": 1
+                },
+                {
+                "label": "Last Semester",
+                "data": [6, 8, 3, 1, 54, 15, 98.225],
+                "backgroundColor": "rgba(255, 99, 132, 0.7)",
+                "borderColor": "rgba(255, 99, 132, 1)",
+                "borderWidth": 1
+                }
+                ]
+                },
+                "options": {
+                "responsive": true,
+                "plugins": {
+                "legend": {
+                "position": "top"
+                },
+                "title": {
+                "display": true,
+                "text": "This Semester vs. Last Semester"
+                }
+                },
+                "scales": {
+                "y": {
+                "beginAtZero": true
+                }
+                }
+                }
+                }
+              -->
+            </canvas>
+          </div>
+        </section>
+        <section>
+          <h2>This Semester vs. Last Semester</h2>
+          <div style="height:50vh">
+            <canvas data-chart="bar">
+              <!--
+                {
+                "data": {
+                "labels": [
+                "Lines of Code Added",
+                "Lines of Code Removed"
+                ],
+                "datasets": [
+                {
+                "label": "This Semester",
+                "data": [1010, 107],
+                "backgroundColor": "rgba(54, 162, 235, 0.7)",
+                "borderColor": "rgba(54, 162, 235, 1)",
+                "borderWidth": 1
+                },
+                {
+                "label": "Last Semester",
+                "data": [1162, 384],
+                "backgroundColor": "rgba(255, 99, 132, 0.7)",
+                "borderColor": "rgba(255, 99, 132, 1)",
+                "borderWidth": 1
+                }
+                ]
+                },
+                "options": {
+                "responsive": true,
+                "plugins": {
+                "legend": {
+                "position": "top"
+                },
+                "title": {
+                "display": true,
+                "text": "This Semester vs. Last Semester"
+                }
+                },
+                "scales": {
+                "y": {
+                "beginAtZero": true
+                }
+                }
+                }
+                }
+              -->
+            </canvas>
+          </div>
+        </section>
+        <section>
+          <h2>PRs Merged Per Week</h2>
+          <div style="height:50vh">
+            <canvas data-chart="line">
+              <!--
+                {
+                "data": {
+                "labels": ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12", "Week 13+"],
+                "datasets": [
+                {
+                "data": [0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 3],
+                "label": "Last Semester",
+                "backgroundColor": "rgba(220,120,120,.8)",
+                "borderColor": "rgba(220,120,120,1)",
+                "fill": false
+                },
+                {
+                "data": [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 2],
+                "label": "This Semester",
+                "backgroundColor": "rgba(20,220,220,.8)",
+                "borderColor": "rgba(20,220,220,1)",
+                "fill": false
+                }
+                ]
+                },
+                "options": {
+                "responsive": true,
+                "plugins": {
+                "legend": {
+                "position": "top"
+                },
+                "title": {
+                "display": true,
+                "text": "Pull Requests Merged Per Week"
+                }
+                },
+                "scales": {
+                "y": {
+                "beginAtZero": true,
+                "title": {
+                "display": true,
+                "text": "Number of PRs"
+                }
+                },
+                "x": {
+                "title": {
+                "display": true,
+                "text": "Weeks"
+                }
+                }
+                }
+                }
+                }
+              -->
+            </canvas>
+          </div>
+        </section>
+        <section>
+          <h3>Top PR</h3>
+          <span class="fragment">Retain old grading data upon recollection</span>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Top Learnings
+            <span class="fragment">Rails console</span><br>
+              <span class="fragment">`ActiveRecord`</span><br>
+              <span class="fragment">RSpec</span><br>
+              <span class="fragment">Rails mechanisms (e.g. transactions)</span><br>
+              <span class="fragment">Ruby Methods (e.g. `Kernel#caller`)</span><br>
+              <span class="fragment">Good code takes time</span><br>
+          </textarea>
+        </section>
+        <section>
+          <h2>A Huge Thank You</h2>
+            <span class="fragment">Team MarkUs</span><br>
+              <span class="fragment">Entirety of SDS</span><br>
+              <span class="fragment">Prof. David Liu</span><br>
+        </section>
+        <section>
+          <h2>The End</h2>
+        </section>
+      </div>
+      <script src="dist/reveal.js"></script>
+      <script src="plugin/notes/notes.js"></script>
+      <script src="plugin/markdown/markdown.js"></script>
+      <script src="plugin/highlight/highlight.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+      <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+          hash: true,
+
+          // Learn about plugins: https://revealjs.com/plugins/
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealChart],
+        });
+      </script>
+  </body>
+</html>
